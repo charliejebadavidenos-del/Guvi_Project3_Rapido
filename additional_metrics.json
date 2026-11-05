@@ -1,0 +1,86 @@
+{
+    "ride_outcome": {
+        "accuracy": 0.48795,
+        "f1": 0.41166205697386077,
+        "classes": [
+            "Cancelled",
+            "Completed",
+            "Incomplete"
+        ],
+        "confusion_matrix": [
+            [
+                2662,
+                656,
+                1339
+            ],
+            [
+                4797,
+                6471,
+                2401
+            ],
+            [
+                647,
+                401,
+                626
+            ]
+        ],
+        "auc_macro_ovr": 0.6685142233342098
+    },
+    "customer_risk": {
+        "accuracy": 0.5135,
+        "f1": 0.5328852616418627,
+        "classes": [
+            0,
+            1
+        ],
+        "confusion_matrix": [
+            [
+                472,
+                459
+            ],
+            [
+                514,
+                555
+            ]
+        ],
+        "auc": 0.5150998905790468
+    },
+    "driver_delay": {
+        "accuracy": 0.651,
+        "f1": 0.20137299771167047,
+        "classes": [
+            0,
+            1
+        ],
+        "confusion_matrix": [
+            [
+                607,
+                262
+            ],
+            [
+                87,
+                44
+            ]
+        ],
+        "auc": 0.47367773785785194
+    },
+    "fare_tuned": {
+        "rmse": 11.977081226004781,
+        "mae": 8.574191614279604,
+        "r2": 0.9964241899758732,
+        "rmse_pct_of_mean_fare": 3.6973969807329246,
+        "best_cv_rmse": 11.899278163990866,
+        "best_parameters": {
+            "model__max_depth": 15,
+            "model__min_samples_leaf": 3
+        }
+    },
+    "limitations": [
+        "Customer and driver models predict supplied snapshot flags.",
+        "Future cancellation and delay performance is not established.",
+        "Aggregate demand and descriptive scores are excluded from predictors.",
+        "Fare-per-km and fare-per-minute are analysis-only features.",
+        "Random holdouts provide exploratory evaluation, not temporal validation.",
+        "Existing holdouts have been inspected during development."
+    ]
+}
